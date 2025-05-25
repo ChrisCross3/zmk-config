@@ -107,7 +107,7 @@
             tapping-term-ms = <400>;
             bindings = <&kp B>, <&kp N>;
         };
-    }
+    };
     keymap {
         compatible = "zmk,keymap";
 
