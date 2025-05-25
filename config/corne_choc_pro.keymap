@@ -132,7 +132,7 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
             bindings = <
                 &kp TAB   &td_q_p   &td_w_o   &td_e_i   &td_r_u           &td_t_y &kp C_MUTE &kp C_PP &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-                &sk LCTRL &td_a_smi &td_s_l   &td_d_k   &ht &kP F &kp J &td_g_h &kp LALT   &kp RALT &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+                &sk LCTRL &td_a_smi &td_s_l   &td_d_k   &ht &kp F &kp J &td_g_h &kp LALT   &kp RALT &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
                 &sk LSHFT &td_z_fsl &td_x_dot &td_c_cma &td_v_m           &td_b_n                     &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                                                     &td_mo1_mo2 &key_repeat &td_spc_ent         &kp RET &mo 2 &kp RALT
             >;
