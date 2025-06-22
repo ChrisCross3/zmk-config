@@ -154,13 +154,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
         };
-
-        mt_spc_mo3: mt_spc_mo3 {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&sl>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
     };
 
     keymap {
@@ -169,10 +162,10 @@
         default_layer {
             display-name = "DEF";
             bindings = <
-                &kp TAB   &td_q_p   &td_w_o   &td_e_i     &td_r_u     &td_t_y &trans  &trans  &trans  &trans  &trans  &trans
-                &sk LCTRL &td_a_smi &td_s_l   &td_d_k     &mt 1 0     &td_g_h &trans  &trans  &trans  &trans  &trans  &trans
-                &sk LSHFT &td_z_fsl &td_x_dot &td_c_cma   &td_v_m     &td_b_n &trans  &trans  &trans  &trans  &trans  &trans
-                                    &td_mo1_mo2 &kp RIGHT &mt_spc_mo3 &trans  &trans  &trans
+                &kp TAB   &td_q_p   &td_w_o     &td_e_i   &td_r_u     &td_t_y &trans  &trans  &trans  &trans  &trans  &trans
+                &sk LCTRL &td_a_smi &td_s_l     &td_d_k   &mt 1 0     &td_g_h &trans  &trans  &trans  &trans  &trans  &trans
+                &sk LSHFT &td_z_fsl &td_x_dot   &td_c_cma &td_v_m     &td_b_n &trans  &trans  &trans  &trans  &trans  &trans
+                                    &td_mo1_mo2 &kp RIGHT &lt 1 SPACE  &trans  &trans  &trans
             >;
         };
 
