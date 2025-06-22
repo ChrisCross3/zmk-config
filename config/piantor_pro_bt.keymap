@@ -160,7 +160,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&mo>;
+            bindings = <&mo>, <&none>;
         };
 
         lt_rep: layer_tap_key_repeat {
@@ -168,10 +168,8 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&mo>;
+            bindings = <&mo>, <&key_repeat>;
         };
-    };
-
     };
 
     keymap {
@@ -183,7 +181,7 @@
                 &kp TAB   &td_q_p   &td_w_o   &td_e_i         &td_r_u          &td_t_y      &trans  &trans  &trans  &trans  &trans  &trans
                 &sk LSHFT &td_a_smi &td_s_l   &td_d_k         &td_f_j          &td_g_h      &trans  &trans  &trans  &trans  &trans  &trans
                 &sk LCTRL &td_z_fsl &td_x_dot &td_c_cma       &td_v_m          &td_b_n      &trans  &trans  &trans  &trans  &trans  &trans
-                                              &trans          &trans           &lt 3 SPACE  &trans  &trans  &trans
+                                              &lt_rep 1 0     &lt_non 2 0      &lt 3 SPACE  &trans  &trans  &trans
             >;
         };
 
