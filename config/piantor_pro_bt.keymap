@@ -144,6 +144,7 @@
         mt_mo1_sl2: mt_mo1_sl2 {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&mo>, <&sl>;
+
             #binding-cells = <2>;
             tapping-term-ms = <250>;
         };
@@ -151,6 +152,7 @@
         mt_mo3_sl4: mt_mo3_sl4 {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&mo>, <&sl>;
+
             #binding-cells = <2>;
             tapping-term-ms = <250>;
         };
@@ -171,7 +173,7 @@
             bindings = <&mo>, <&key_repeat>;
         };
 
-        lt_umlts: lt_umlts  {
+        lt_umlts: lt_umlts {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -186,10 +188,10 @@
         default_layer {
             display-name = "DEF";
             bindings = <
-                &kp TAB   &td_q_p       &td_w_o   &td_e_i         &td_r_u          &td_t_y      &trans  &trans  &trans  &trans  &trans  &trans
-                &sk LSHFT &lt_umlts 4 0 &td_s_l   &td_d_k         &td_f_j          &td_g_h      &trans  &trans  &trans  &trans  &trans  &trans
-                &sk LCTRL &td_z_fsl     &td_x_dot &td_c_cma       &td_v_m          &td_b_n      &trans  &trans  &trans  &trans  &trans  &trans
-                                                  &lt_rep 3 0     &lt_non 2 0      &lt 1 SPACE  &trans  &trans  &trans
+&kp TAB    &td_q_p        &td_w_o    &td_e_i      &td_r_u      &td_t_y        &trans  &trans  &trans  &trans  &trans  &trans
+&sk LSHFT  &lt_umlts 4 0  &td_s_l    &td_d_k      &td_f_j      &td_g_h        &trans  &trans  &trans  &trans  &trans  &trans
+&sk LCTRL  &td_z_fsl      &td_x_dot  &td_c_cma    &td_v_m      &td_b_n        &trans  &trans  &trans  &trans  &trans  &trans
+                                     &lt_rep 3 0  &lt_non 2 0  &lt 1 SPACE    &trans  &trans  &trans
             >;
         };
 
@@ -216,20 +218,20 @@
         symbol_layer {
             display-name = "SYM";
             bindings = <
-&trans  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LBRC  &kp RBRC  &kp LPAR  &kp RPAR  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LT    &kp GT    &kp LBKT  &kp RBKT  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans    &trans    &trans       &trans  &trans  &trans
+&trans  &kp EXCL  &kp LS(QMARK)  &kp LS(COLON)  &kp BSLH      &kp LS(DLLR)    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LBRC  &kp RBRC       &kp LS(LPAR)   &kp LS(RPAR)  &kp LS(SQT)     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LT    &kp LS(GT)     &kp LBKT       &kp RBKT      &kp POUND       &trans  &trans  &trans  &trans  &trans  &trans
+                                 &trans         &trans        &trans          &trans  &trans  &trans
             >;
         };
 
-        extra_layer_2 {
-            display-name = "EXTRA 2";
+        umlauts_layer {
+            display-name = "UMLTS";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans     &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp MINUS  &kp APOS  &kp LBKT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans    &trans    &trans    &trans  &trans  &trans
             >;
         };
 
