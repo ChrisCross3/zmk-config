@@ -155,7 +155,7 @@
             tapping-term-ms = <250>;
         };
 
-        lt_non: layer_tap {
+        lt_non: layer_tap_none {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -164,7 +164,7 @@
             display-name = "Layer-Tap";
         };
 
-        lt_rep: layer_tap {
+        lt_rep: layer_tap_key_repeat {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
