@@ -170,6 +170,14 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&key_repeat>;
         };
+
+        lt_umlts: lt_umlts  {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&td_a_smi>;
+        };
     };
 
     keymap {
@@ -178,10 +186,10 @@
         default_layer {
             display-name = "DEF";
             bindings = <
-                &kp TAB   &td_q_p   &td_w_o   &td_e_i         &td_r_u          &td_t_y      &trans  &trans  &trans  &trans  &trans  &trans
-                &sk LSHFT &td_a_smi &td_s_l   &td_d_k         &td_f_j          &td_g_h      &trans  &trans  &trans  &trans  &trans  &trans
-                &sk LCTRL &td_z_fsl &td_x_dot &td_c_cma       &td_v_m          &td_b_n      &trans  &trans  &trans  &trans  &trans  &trans
-                                              &lt_rep 3 0     &lt_non 2 0      &lt 1 SPACE  &trans  &trans  &trans
+                &kp TAB   &td_q_p       &td_w_o   &td_e_i         &td_r_u          &td_t_y      &trans  &trans  &trans  &trans  &trans  &trans
+                &sk LSHFT &lt_umlts 4 0 &td_s_l   &td_d_k         &td_f_j          &td_g_h      &trans  &trans  &trans  &trans  &trans  &trans
+                &sk LCTRL &td_z_fsl     &td_x_dot &td_c_cma       &td_v_m          &td_b_n      &trans  &trans  &trans  &trans  &trans  &trans
+                                                  &lt_rep 3 0     &lt_non 2 0      &lt 1 SPACE  &trans  &trans  &trans
             >;
         };
 
