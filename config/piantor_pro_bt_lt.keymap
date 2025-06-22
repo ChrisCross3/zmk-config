@@ -165,13 +165,23 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "DEF";
+        default_layer_1 {
+            display-name = "DEF 1";
             bindings = <
-                &kp TAB   &td_q_p   &td_w_o   &td_e_i     &td_r_u   &td_t_y &trans  &trans  &trans  &trans  &trans  &trans
-                &sk LCTRL &td_a_smi &td_s_l   &td_d_k     &mt 1 0   &td_g_h &trans  &trans  &trans  &trans  &trans  &trans
-                &sk LSHFT &td_z_fsl &td_x_dot &td_c_cma   &td_v_m   &td_b_n &trans  &trans  &trans  &trans  &trans  &trans
-                                    &td_mo1_mo2 &kp RIGHT &kp SPACE &trans  &trans  &trans
+&kp TAB         &kp Q  &kp W  &kp E            &kp R      &kp T              &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D            &kp F      &kp G              &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL       &kp Z  &kp X  &kp C            &kp V      &kp B              &trans  &trans  &trans  &trans  &trans  &trans
+                              &mt_mo3_sl4 2 3  &kp SPACE  &mt_mo1_sl2 4 1    &trans  &trans  &trans
+            >;
+        };
+
+        default_layer_2 {
+            display-name = "DEF 2";
+            bindings = <
+&trans  &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans     &trans  &trans    &trans  &trans  &trans
             >;
         };
 
