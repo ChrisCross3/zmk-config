@@ -148,9 +148,8 @@
             bindings = <&mo>, <&sl>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <0>;
+            tapping-term-ms = <250>;
             label = "MT_MO1_SL2";
-            retro-tap;
         };
 
         mt_mo3_sl4: mt_mo3_sl4 {
@@ -159,8 +158,7 @@
             bindings = <&mo>, <&sl>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <0>;
-            retro-tap;
+            tapping-term-ms = <250>;
         };
     };
 
