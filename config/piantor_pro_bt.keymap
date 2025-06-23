@@ -153,7 +153,7 @@
         lt_umlts: lt_umlts {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <250>;
             bindings = <&mo>, <&td_a_smi>;
         };
@@ -161,7 +161,7 @@
         mt_umlts: mt_umlts {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tapd-preferred";
             tapping-term-ms = <250>;
             bindings = <&mo>, <&kp>;
         };
