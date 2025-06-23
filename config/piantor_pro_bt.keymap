@@ -189,20 +189,20 @@
         default_layer_1 {
             display-name = "DEF 1";
             bindings = <
-&kp TAB           &kp Q         &kp W  &kp E     &kp R  &kp T        &trans  &trans  &trans  &trans  &trans  &trans
-&st LSHIFT LSHIFT &mt_umlts 5 A &kp S  &kp D     &kp F  &kp G        &trans  &trans  &trans  &trans  &trans  &trans
-&st LCTRL  LCTRL  &kp Z         &kp X  &kp C     &kp V  &kp B        &trans  &trans  &trans  &trans  &trans  &trans
-                                       &st_l 3 4 &mo 2  &lt 1 SPACE  &trans  &trans  &trans
+&kp TAB            &kp Q          &kp W  &kp E      &kp R  &kp T          &trans  &trans  &trans  &trans  &trans  &trans
+&st LSHIFT LSHIFT  &mt_umlts 5 A  &kp S  &kp D      &kp F  &kp G          &trans  &trans  &trans  &trans  &trans  &trans
+&st LCTRL LCTRL    &kp Z          &kp X  &kp C      &kp V  &kp B          &trans  &trans  &trans  &trans  &trans  &trans
+                                         &st_l 3 4  &mo 2  &lt 1 SPACE    &trans  &trans  &trans
             >;
         };
 
         default_layer_2 {
             display-name = "DEF 2";
             bindings = <
-&trans  &kp P     &kp O    &kp I       &kp U       &kp Y       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp SEMI  &kp L    &kp K       &kp J       &kp H       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp FSLH  &kp DOT  &kp COMMA   &kp M       &kp N       &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans      &trans      &trans      &trans  &trans  &trans
+&trans  &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans     &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -239,10 +239,10 @@
         umlauts_layer {
             display-name = "UMLTS";
             bindings = <
-&trans  &trans  &trans     &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp MINUS  &kp APOS  &kp LBKT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans    &trans    &trans    &trans  &trans  &trans
+&trans  &trans  &kp LS(QMARK)  &kp LS(EXCL)  &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp MINUS      &kp APOS      &kp LBKT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans         &trans        &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                               &trans        &trans    &trans    &trans  &trans  &trans
             >;
         };
 
