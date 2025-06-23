@@ -158,7 +158,7 @@
             bindings = <&mo>, <&td_a_smi>;
         };
 
-        mt_umlts: lt_umlts {
+        mt_umlts: mt_umlts {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
