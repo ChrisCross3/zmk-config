@@ -188,18 +188,36 @@
             tapping-term-ms = <200>;
             bindings = <&kp>, <&sk>;
         };
+
+        st_l: st_l {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&sk>;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "DEF";
+        default_layer_1 {
+            display-name = "DEF 1";
             bindings = <
-&kp TAB          &td_q_p        &td_w_o    &td_e_i      &td_r_u      &td_t_y        &trans  &trans  &trans  &trans  &trans  &trans
-&st LSHFT LSHFT  &lt_umlts 4 0  &td_s_l    &td_d_k      &td_f_j      &td_g_h        &trans  &trans  &trans  &trans  &trans  &trans
-&st LCTRL LCTRL  &td_z_fsl      &td_x_dot  &td_c_cma    &td_v_m      &td_b_n        &trans  &trans  &trans  &trans  &trans  &trans
-                                     &lt_rep 3 0  &lt_non 2 0  &lt 1 SPACE    &trans  &trans  &trans
+&kp TAB         &kp Q  &kp W  &kp E     &kp R     &kp T       &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D     &kp F     &kp G       &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL       &kp Z  &kp X  &kp C     &kp V     &kp B       &trans  &trans  &trans  &trans  &trans  &trans
+                              &st_l 2 3 &st_l 1 1 &st 1 SPACE &trans  &trans  &trans
+            >;
+        };
+
+        default_layer_2 {
+            display-name = "DEF 2";
+            bindings = <
+&trans  &kp P     &kp O    &kp I       &kp U       &kp Y       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp SEMI  &kp L    &kp K       &kp J       &kp H       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp FSLH  &kp DOT  &kp COMMA   &kp M       &kp N       &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans      &trans      &trans      &trans  &trans  &trans
             >;
         };
 
