@@ -134,29 +134,6 @@
             bindings = <&kp SPACE>, <&kp RET>;
         };
 
-        mt: mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&td_f_j>;
-        };
-
-        mt_mo1_sl2: mt_mo1_sl2 {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&sl>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-        };
-
-        mt_mo3_sl4: mt_mo3_sl4 {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&sl>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-        };
-
         lt_non: layer_tap_none {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -204,10 +181,10 @@
         default_layer_1 {
             display-name = "DEF 1";
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E     &kp R     &kp T       &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D     &kp F     &kp G       &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL       &kp Z  &kp X  &kp C     &kp V     &kp B       &trans  &trans  &trans  &trans  &trans  &trans
-                              &st_l 3 4 &st_l 1 1 &st 2 SPACE &trans  &trans  &trans
+&kp TAB           &kp Q  &kp W  &kp E     &kp R     &kp T       &trans  &trans  &trans  &trans  &trans  &trans
+&st LSHIFT LSHIFT &kp A  &kp S  &kp D     &kp F     &kp G       &trans  &trans  &trans  &trans  &trans  &trans
+&st LCTRL  LCTRL  &kp Z  &kp X  &kp C     &kp V     &kp B       &trans  &trans  &trans  &trans  &trans  &trans
+                                &st_l 3 4 &st_l 1 1 &lt 2 SPACE &trans  &trans  &trans
             >;
         };
 
