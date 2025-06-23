@@ -154,7 +154,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&mo>, <&td_a_smi>;
         };
 
@@ -162,7 +162,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&mo>, <&kp>;
         };
 
@@ -189,10 +189,10 @@
         default_layer_1 {
             display-name = "DEF 1";
             bindings = <
-&kp TAB           &kp Q         &kp W  &kp E     &kp R       &kp T      &trans  &trans  &trans  &trans  &trans  &trans
-&st LSHIFT LSHIFT &mt_umlts 5 A &kp S  &kp D     &kp F       &kp G      &trans  &trans  &trans  &trans  &trans  &trans
-&st LCTRL  LCTRL  &kp Z         &kp X  &kp C     &kp V       &kp B      &trans  &trans  &trans  &trans  &trans  &trans
-                                       &st_l 3 4 &lt 2 SPACE &st_l 1 1  &trans  &trans  &trans
+&kp TAB           &kp Q         &kp W  &kp E     &kp R  &kp T        &trans  &trans  &trans  &trans  &trans  &trans
+&st LSHIFT LSHIFT &mt_umlts 5 A &kp S  &kp D     &kp F  &kp G        &trans  &trans  &trans  &trans  &trans  &trans
+&st LCTRL  LCTRL  &kp Z         &kp X  &kp C     &kp V  &kp B        &trans  &trans  &trans  &trans  &trans  &trans
+                                       &st_l 3 4 &mo 2  &lt 1 SPACE  &trans  &trans  &trans
             >;
         };
 
