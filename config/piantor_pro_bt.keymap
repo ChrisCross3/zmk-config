@@ -194,7 +194,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&sk>;
+            bindings = <&mo>, <&sl>;
         };
     };
 
@@ -207,7 +207,7 @@
 &kp TAB         &kp Q  &kp W  &kp E     &kp R     &kp T       &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D     &kp F     &kp G       &trans  &trans  &trans  &trans  &trans  &trans
 &kp LCTRL       &kp Z  &kp X  &kp C     &kp V     &kp B       &trans  &trans  &trans  &trans  &trans  &trans
-                              &st_l 2 3 &st_l 1 1 &st 1 SPACE &trans  &trans  &trans
+                              &st_l 3 4 &st_l 1 1 &st 2 SPACE &trans  &trans  &trans
             >;
         };
 
