@@ -166,20 +166,28 @@
             bindings = <&mo>, <&kp>;
         };
 
-        st: st {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <250>;
-            bindings = <&kp>, <&sk>;
-        };
-
         st_l: st_l {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&sl>;
+        };
+
+        sk_lng: sk_long {
+            compatible = "zmk,behavior-sticky-key";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            ignore-modifiers;
+            release-after-ms = <2000>;
+        };
+
+        st: st {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            bindings = <&kp>, <&sk>;
         };
     };
 
