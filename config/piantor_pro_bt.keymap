@@ -172,6 +172,8 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&sk>;
+
+            retro-tap;
         };
 
         st_l: st_l {
@@ -209,9 +211,9 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&trans  &trans              &kp PG_UP  &kp PG_DN  &kp HOME  &kp BACKSPACE    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(LEFT_SHIFT)  &kp UP     &kp LEFT   &kp END   &kp ENTER        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans              &kp DOWN   &kp RIGHT  &trans    &kp ESCAPE       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none               &kp PG_UP  &kp PG_DN  &none     &kp BACKSPACE    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(LEFT_SHIFT)  &kp DOWN   &kp RIGHT  &kp HOME  &kp ENTER        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none               &kp UP     &kp LEFT   &kp END   &kp ESCAPE       &trans  &trans  &trans  &trans  &trans  &trans
                                        &trans     &trans    &trans           &trans  &trans  &trans
             >;
         };
