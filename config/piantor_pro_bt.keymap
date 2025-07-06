@@ -161,7 +161,7 @@
         mt_umlts: mt_umlts {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tapd-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <250>;
             bindings = <&mo>, <&kp>;
         };
