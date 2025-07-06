@@ -194,7 +194,7 @@
     combos {
         compatible = "zmk,combos";
 
-        cnfg_combo {
+        cfg_combo {
             bindings = <&sl 9>;
             key-positions = <2 3 4>;
         };
