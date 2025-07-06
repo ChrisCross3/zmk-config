@@ -172,7 +172,6 @@
             flavor = "tap-preferred";
             tapping-term-ms = <250>;
             bindings = <&kp>, <&sk>;
-            retro-tap;
         };
 
         st_l: st_l {
