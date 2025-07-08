@@ -207,10 +207,10 @@
         default_layer_1 {
             display-name = "DEF 1";
             bindings = <
-&kp TAB            &kp Q          &kp W  &kp E      &kp R  &kp T          &trans  &trans  &trans  &trans  &trans  &trans
-&st LSHIFT LSHIFT  &mt_umlts 5 A  &kp S  &kp D      &kp F  &kp G          &trans  &trans  &trans  &trans  &trans  &trans
-&st LCTRL LCTRL    &kp Z          &kp X  &kp C      &kp V  &kp B          &trans  &trans  &trans  &trans  &trans  &trans
-                                         &st_l 3 4  &mo 2  &lt 1 SPACE    &trans  &trans  &trans
+&kp TAB          &td_q_p        &td_w_o    &td_e_i      &td_r_u      &td_t_y        &trans  &trans  &trans  &trans  &trans  &trans
+&st LSHFT LSHFT  &td_a_smi      &td_s_l    &td_d_k      &td_f_j      &td_g_h        &trans  &trans  &trans  &trans  &trans  &trans
+&st LCTRL LCTRL  &td_z_fsl      &td_x_dot  &td_c_cma    &td_v_m      &td_b_n        &trans  &trans  &trans  &trans  &trans  &trans
+                                           &lt_rep 3 0  &lt_non 2 0  &lt 1 SPACE    &trans  &trans  &trans
             >;
         };
 
