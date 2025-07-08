@@ -201,11 +201,94 @@
     };
 
     macros {
-        mc_e_i: mc_e_i {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp E &kp I>;
-            label = "MC_E_I";
+        mc_q_p: macro_q_p {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp Q &kp P>;
+        };
+
+        mc_w_o: macro_w_o {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp W &kp O>;
+        };
+
+        mc_e_i: macro_e_i {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp E &kp I>;
+        };
+
+        mc_r_u: macro_r_u {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp R &kp U>;
+        };
+
+        mc_t_y: macro_t_y {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp T &kp Y>;
+        };
+
+        mc_a_smi: macro_a_smi {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp A &kp SEMI>;
+        };
+
+        mc_s_l: macro_s_l {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp S &kp L>;
+        };
+
+        mc_d_k: macro_d_k {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp D &kp K>;
+        };
+
+        mc_f_j: macro_f_j {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp F &kp J>;
+        };
+
+        mc_g_h: macro_g_h {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp G &kp H>;
+        };
+
+        mc_z_fsl: macro_z_fsl {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp Z &kp FSLH>;
+        };
+
+        mc_x_dot: macro_x_dot {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp X &kp DOT>;
+        };
+
+        mc_c_cma: macro_c_cma {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp C &kp COMMA>;
+        };
+
+        mc_v_m: macro_v_m {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp V &kp M>;
+        };
+
+        mc_b_n: macro_b_n {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp B &kp N>;
         };
     };
 
@@ -215,14 +298,20 @@
         default_layer_1 {
             display-name = "DEF 1";
             bindings = <
-&kp TAB  &td_q_p  &td_w_o  &td_e_i  &td_r_u  &td_t_y  &trans  &trans  &trans  &trans  &trans  &trans  &st LSHFT LSHFT  &td_a_smi  &td_s_l  &td_d_k  &td_f_j  &td_g_h  &trans  &trans  &trans  &trans  &trans  &trans  &st LCTRL LCTRL  &td_z_fsl  &td_x_dot  &td_c_cma  &td_v_m  &td_b_n  &trans  &trans  &trans  &trans  &trans  &trans  &lt_rep 3 0  &lt_non 2 0  &lt 1 SPACE  &trans  &trans  &trans
+&kp TAB          &td_q_p    &td_w_o  &td_e_i  &td_r_u  &td_t_y  &trans  &trans  &trans  &trans  &trans  &trans  
+&st LSHFT LSHFT  &td_a_smi  &td_s_l  &td_d_k  &td_f_j  &td_g_h  &trans  &trans  &trans  &trans  &trans  &trans  
+&st LCTRL LCTRL  &td_z_fsl  &td_x_dot  &td_c_cma  &td_v_m  &td_b_n  &trans  &trans  &trans  &trans  &trans  &trans  
+&lt_rep 3 0  &lt_non 2 0  &lt 1 SPACE  &trans  &trans  &trans
             >;
         };
 
         default_layer_2 {
             display-name = "DEF 2";
             bindings = <
-&trans  &kp P  &kp O  &mc_e_i  &kp U  &kp Y  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp SEMI  &kp L  &kp K  &kp J  &kp H  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp FSLH  &kp DOT  &kp COMMA  &kp M  &kp N  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB          &mc_q_p    &mc_w_o  &mc_e_i  &mc_r_u  &mc_t_y  &trans  &trans  &trans  &trans  &trans  &trans  
+&st LSHFT LSHFT  &mc_a_smi  &mc_s_l  &mc_d_k  &mc_f_j  &mc_g_h  &trans  &trans  &trans  &trans  &trans  &trans  
+&st LCTRL LCTRL  &mc_z_fsl  &mc_x_dot  &mc_c_cma  &mc_v_m  &mc_b_n  &trans  &trans  &trans  &trans  &trans  &trans  
+&trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
