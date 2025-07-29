@@ -264,23 +264,23 @@
             >;
         };
 
-        extra_layer_3 {
-            display-name = "EXTRA 3";
+        default_layer_t1 {
+            display-name = "DEF T1";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&kp TAB            &kp Q          &kp W  &kp E      &kp R        &kp T  &kp Y  &kp U            &kp I      &kp O    &kp P     &trans
+&st LSHIFT LSHIFT  &mt_umlts 5 A  &kp S  &kp D      &kp F        &kp G  &kp H  &kp J            &kp K      &kp L    &kp SEMI  &trans
+&st LCTRL LCTRL    &kp Z          &kp X  &kp C      &kp V        &kp B  &kp N  &kp M            &kp COMMA  &kp DOT  &kp FSLH  &trans
+                                         &st_l 3 4  &lt 2 SPACE  &mo 7  &mo 0  &rgb_ug RGB_TOG  &trans
             >;
         };
 
-        extra_layer_4 {
-            display-name = "EXTRA 4";
+        default_layer_t2 {
+            display-name = "DEF T2";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans     &trans  &trans    &trans  &trans  &trans
             >;
         };
 
