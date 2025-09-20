@@ -282,10 +282,10 @@
         umlauts_layer {
             display-name = "UMLTS";
             bindings = <
-&trans  &trans     &kp LS(QMARK)  &kp LS(EXCL)  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  
-&trans  &kp MINUS  &kp APOS       &kp LBKT      &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans         &trans        &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                                  &trans        &trans  &trans      &trans  &trans  &trans
+&trans  &trans     &kp LS(QMARK)  &kp LS(EXCL)  &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans  
+&trans  &trans     &kp MINUS      &kp APOS      &kp LBKT  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans         &trans        &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                                  &trans        &trans    &trans      &trans  &trans  &trans
             >;
         };
 
