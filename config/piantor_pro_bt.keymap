@@ -191,40 +191,6 @@
             tapping-term-ms = <250>;
             bindings = <&kp>, <&sk_lng>;
         };
-
-        /* Tap-Dance: 1x → sticky shift, 2x → caps_word */
-        td_shift: tap_dance_shift {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk LSHIFT>, <&caps_word>;
-        };
-
-        /* Hold-Tap, benutzt die obige Tap-Dance als TAP action.
-           Hold = &kp LSHIFT (Shift gedrückt halten).
-           quick-tap-ms = tapping-term-ms verhindert Verzögerungen bei Double-Tap. */
-        htd_shift: hold_tap_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            bindings = <&kp>, <&td_shift>;
-        };
-     
-        ctrl_2tap: sticky_ctrl_2 {
-            compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;   
-            release-after-n-keys = <2>;    /* Nach zwei Tastenanschlägen wieder freigeben */
-            bindings = <&kp>;
-        };
-
-        td_shift: tap_dance_shift {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk LSHIFT>, <&ctrl_2tap LSHIFT>;
-        };
     };
 
     combos {
@@ -307,10 +273,10 @@
         symbol_layer {
             display-name = "SYM";
             bindings = <
-&trans  &kp EXCL  &kp LS(QMARK)  &kp LS(COLON)  &kp DE_BACKSLASH  &kp LS(DLLR)      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LBRC  &kp RBRC       &kp LS(LPAR)   &kp LS(RPAR)      &kp LS(SQT)       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LT    &kp LS(GT)     &kp LBKT       &kp RBKT          &kp DE_HASH       &trans  &trans  &trans  &trans  &trans  &trans
-                                 &trans         &trans            &trans            &trans  &trans  &trans
+&trans  &kp EXCL       &kp DE_LBKT  &kp DE_RBKT   &kp DE_LPAR    &kp DE_RPAR      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LBRC       &kp DE_LBRC  &kp DE_LBRC   &kp DE_LT      &kp DE_RT        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp DE_DOLLAR  &kp DE_AMPS  &kp DE_EQUAL  &kp BACKSLASH  &kp DE_HASH      &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans        &trans         &trans           &trans  &trans  &trans
             >;
         };
 
@@ -319,7 +285,7 @@
             bindings = <
 &trans  &trans  &kp DE_QUESTION  &kp DE_EXCLAMATION  &kp DE_COLON     &kp DE_DOUBLE_QUOTES      &trans  &trans  &trans  &trans  &trans  &trans  
 &trans  &trans  &kp DE_SHARP_S   &kp DE_A_UMLAUT     &kp DE_U_UMLAUT  &kp DE_O_UMLAUT           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans           &trans              &kp DE_AT        &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &trans              &kp DE_AT        &sk LEFT_WIN              &trans  &trans  &trans  &trans  &trans  &trans
                                  &trans              &trans           &trans                    &trans  &trans  &trans
             >;
         };
