@@ -199,8 +199,8 @@
                 tapping-term-ms = <200>;
 
                 bindings = <
-                    &sk LSHIFT,      /* Single tap -> OneShot Shift (nächster Key groß) */
-                    &kp LSHIFT,      /* Hold -> Shift gedrückt halten */
+                    &sk LSHIFT      /* Single tap -> OneShot Shift (nächster Key groß) */
+                    &kp LSHIFT      /* Hold -> Shift gedrückt halten */
                     &caps_word     /* Double tap -> Caps Word toggeln */
                 >;
             };
