@@ -192,19 +192,18 @@
             bindings = <&kp>, <&sk_lng>;
         };
 
-        behaviors {
-            td_caps: tap_dance_caps {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
+        td_caps: tap_dance_caps {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
 
-                bindings = <
-                    &sk LSHIFT      /* Single tap -> OneShot Shift (nächster Key groß) */
-                    &kp LSHIFT      /* Hold -> Shift gedrückt halten */
-                    &caps_word     /* Double tap -> Caps Word toggeln */
-                >;
-            };
+            bindings = <
+                &sk LSHIFT      /* Single tap -> OneShot Shift (nächster Key groß) */
+                &kp LSHIFT      /* Hold -> Shift gedrückt halten */
+                &caps_word     /* Double tap -> Caps Word toggeln */
+            >;
         };
+     
     };
 
     combos {
