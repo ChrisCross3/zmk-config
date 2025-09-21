@@ -192,16 +192,24 @@
             bindings = <&kp>, <&sk_lng>;
         };
 
-        td_caps: tap_dance_caps {
+        /* Tap-Dance: 1x → sticky shift, 2x → caps_word */
+        td_shift: tap_dance_shift {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
+            bindings = <&sk LSHIFT>, <&caps_word>;
+        };
 
-            bindings = <
-                &sk LSHIFT      /* Single tap -> OneShot Shift (nächster Key groß) */
-                &kp LSHIFT      /* Hold -> Shift gedrückt halten */
-                &caps_word     /* Double tap -> Caps Word toggeln */
-            >;
+        /* Hold-Tap, benutzt die obige Tap-Dance als TAP action.
+           Hold = &kp LSHIFT (Shift gedrückt halten).
+           quick-tap-ms = tapping-term-ms verhindert Verzögerungen bei Double-Tap. */
+        htd_shift: hold_tap_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&td_shift>;
         };
      
     };
@@ -226,9 +234,9 @@
         default_layer_1 {
             display-name = "DEF 1";
             bindings = <
-&kp TAB            &kp Q          &kp W  &kp E      &kp R  &kp T            &kp Y  &kp U            &kp I      &kp O    &kp P     &trans
-&td_caps           &mt_umlts 7 A  &kp S  &kp D      &kp F  &kp G            &kp H  &kp J            &kp K      &kp L    &kp SEMI  &trans
-&st LCTRL LCTRL    &kp Z          &kp X  &kp C      &kp V  &kp B            &kp N  &kp M            &kp COMMA  &kp DOT  &kp FSLH  &trans  
+&kp TAB              &kp Q          &kp W  &kp E      &kp R  &kp T            &kp Y  &kp U            &kp I      &kp O    &kp P     &trans
+&htd_shift LSHIFT 0  &mt_umlts 7 A  &kp S  &kp D      &kp F  &kp G            &kp H  &kp J            &kp K      &kp L    &kp SEMI  &trans
+&st LCTRL LCTRL      &kp Z          &kp X  &kp C      &kp V  &kp B            &kp N  &kp M            &kp COMMA  &kp DOT  &kp FSLH  &trans  
                                          &st_l 5 6  &mo 4  &lt 1 SPACE      &mo 0  &rgb_ug RGB_TOG  &trans
             >;
         };
@@ -267,8 +275,8 @@
             display-name = "NAV";
             bindings = <
 &trans  &none               &kp PG_UP  &kp PG_DN  &none     &kp BACKSPACE      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(LEFT_SHIFT)  &kp HOME   &kp UP     &kp RIGHT  &kp ENTER          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &none               &kp END    &kp DOWN   &kp LEFT   &kp ESCAPE         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(LEFT_SHIFT)  &kp END    &kp UP     &kp RIGHT  &kp ENTER          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none               &kp HOME   &kp DOWN   &kp LEFT   &kp ESCAPE         &trans  &trans  &trans  &trans  &trans  &trans
                                        &trans     &trans    &trans             &trans  &trans  &trans
             >;
         };
