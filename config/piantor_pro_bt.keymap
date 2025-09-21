@@ -219,7 +219,7 @@
             bindings = <&kp>;
         };
 
-        td_shift: tap_dance_shift {
+        td_ctrl: tap_dance_ctrl {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -249,7 +249,7 @@
             bindings = <
 &kp TAB              &kp Q          &kp W  &kp E      &kp R  &kp T            &kp Y  &kp U            &kp I      &kp O    &kp P     &trans
 &htd_shift LSHIFT 0  &mt_umlts 7 A  &kp S  &kp D      &kp F  &kp G            &kp H  &kp J            &kp K      &kp L    &kp SEMI  &trans
-&td_shift            &kp Z          &kp X  &kp C      &kp V  &kp B            &kp N  &kp M            &kp COMMA  &kp DOT  &kp FSLH  &trans  
+&td_ctrl             &kp Z          &kp X  &kp C      &kp V  &kp B            &kp N  &kp M            &kp COMMA  &kp DOT  &kp FSLH  &trans  
                                          &st_l 5 6  &mo 4  &lt 1 SPACE      &mo 0  &rgb_ug RGB_TOG  &trans
             >;
         };
