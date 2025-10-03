@@ -191,6 +191,13 @@
             tapping-term-ms = <250>;
             bindings = <&kp>, <&sk_lng>;
         };
+
+        td_lshft: tap_dance_left_shift {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&os LSHIFT>, <&caps_word>;
+        };
     };
 
     combos {
@@ -214,7 +221,7 @@
             display-name = "DEF 1";
             bindings = <
 &kp TAB            &kp Q          &kp W  &kp E      &kp R  &kp T            &kp Y  &kp U            &kp I      &kp O    &kp P     &trans
-&st LSHIFT LSHIFT  &mt_umlts 7 A  &kp S  &kp D      &kp F  &kp G            &kp H  &kp J            &kp K      &kp L    &kp SEMI  &trans
+&td_lshft          &mt_umlts 7 A  &kp S  &kp D      &kp F  &kp G            &kp H  &kp J            &kp K      &kp L    &kp SEMI  &trans
 &st LCTRL LCTRL    &kp Z          &kp X  &kp C      &kp V  &kp B            &kp N  &kp M            &kp COMMA  &kp DOT  &kp FSLH  &trans  
                                          &st_l 5 6  &mo 4  &lt 1 SPACE      &mo 0  &rgb_ug RGB_TOG  &trans
             >;
